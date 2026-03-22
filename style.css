@@ -1,0 +1,141 @@
+body{
+    background-color: #0e0000;
+}
+.div1{
+    margin: 0 auto;
+    padding: 2em;
+    background: #1c1f2b;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.div1::after, .div::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, #00ff66, #ff8c00, #44ccff);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+
+}
+.div1::before{
+    filter: blur(100rem);
+    opacity: 10;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+h1{
+
+    background-image: linear-gradient(90deg, #00ff66, #ff8c00, #44ccff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    text-shadow: 
+        0 0 px #013014,
+        0 0 15px rgba(255, 140, 0, 0.3),
+        0 0 25px rgba(68, 204, 255, 0.2);
+
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+.div2{
+    margin-top: 10px;
+    background: #1c1f2b;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+  
+}
+.h41{
+    text-align: center;
+    margin: 10px;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+.span1{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.div3{
+
+  width: 125px;
+  background: #1c1f2b;
+  
+  border-radius: 10px;
+  position: relative;
+}
+
+.h42{
+       text-align: center;
+    margin: 10px;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+.project-card {
+    background: #1c1f2b;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: white;
+    margin: 10px 0;
+}
+
+.category {
+    color: #3498db;
+    font-size: 0.9rem;
+}
+
+.description {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
